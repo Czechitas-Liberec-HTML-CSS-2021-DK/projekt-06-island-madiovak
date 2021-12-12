@@ -1,0 +1,327 @@
+*, ::after, ::before { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    font-family: 'Merriweather', serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.leading {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    justify-content: space-around;
+    min-width: 440px;
+    background-color: white;
+
+}
+
+/*                  HEADER                              */
+header {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    background-image: url("/images/island-hlavicka.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    min-width: 440px;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+header h1 {
+    font-size: 3.5rem;
+}
+
+.signature {
+    color: lightgray;
+    position: relative;
+}
+
+.signature::before {
+    position:absolute;
+    content: '';
+    top:-20px;
+    height: 3px;
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+    width: 17%;
+    background: lightgray;
+}
+/*--------------                                    */
+
+
+
+/*                  NAVIGACE                        */
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: lightgray;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    justify-content:center;
+    text-align: center;
+    padding: 50px;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+    border-bottom: solid 1px lightgray;
+}
+
+/*                  TEXT SECTION                  */
+h2 {
+    padding-left: 20px;
+}
+
+.text {
+    font-size: 1rem;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    font-weight: 600;
+}
+
+.underline {
+    text-decoration: none;
+    position: relative;
+}
+
+.underline::after {
+        position: absolute;
+        content: '';
+        height: 5px;
+        bottom: -4px;
+        margin: 0 auto;
+        left: 0;
+        width: 17%;
+        background: #629edb;
+}
+
+.autor {
+    color: gray;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0px;
+    padding-top: 3px;
+}
+
+.autor a {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+/*                  GALLERY                     */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    padding-top: 40px;
+}
+
+.label {
+    color: gray;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.description a {
+    color: gray;
+}
+
+.foto {
+    padding-bottom: 20px;
+}
+
+/*                  FOOTER                      */
+footer {
+    background-color: #f5f5f5;
+    color: gray;
+    padding: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+
+}
+footer a {
+    color: gray;
+}
+
+
+
+/*TABLET*/
+@media (min-width: 500px) {
+    ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0px;
+    }
+
+    li {
+        border: solid 0.5px lightgray;
+        border-left: none;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1rem;
+    }
+
+    .noborder {
+        border-right: none;
+    }
+
+    .text {
+        font-size: 1.2rem;
+    }
+
+    .underline::after {
+        position: absolute;
+        content: '';
+        height: 5px;
+        bottom: -4px;
+        margin: 0 auto;
+        left: 0;
+        width: 9%;
+        background: #629edb;
+}
+
+    .gallery {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+    }
+
+    .foto {
+        display: flex;
+        flex-basis: 50%;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .label {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+        transition: .5s ease;
+        opacity:0;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .place {
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .description {
+        color: white;
+    }
+
+
+    .description a {
+        color: white;
+    }
+
+    .foto:hover .label {
+        opacity: 1;
+
+}
+}
+
+
+/*DESKTOP*/
+@media (min-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        justify-content: center;
+    }
+
+    header {
+        position: absolute;
+        padding-left: 300px;
+        padding-right: 300px;
+        min-height: 550px;
+        font-size: 1.3rem;
+    }
+
+    .title{
+        font-size: 6rem;
+        margin: 50px;
+    }
+
+    .leading {
+        width: 70%;
+        margin: auto;
+        position: relative;
+        top: 500px;
+        justify-content: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        float: left;
+    }
+
+    li {
+        border-bottom: solid 0.5px lightgray;
+        border-top: none;
+        border-right: none;
+    }
+
+    .step {
+        position: relative;
+        left: 35%;
+        width: 65%;
+    }
+
+    .step h2 {
+        padding-bottom: 20px;
+    }
+
+    .foto {
+        display: flex;
+        flex-basis: 33.33%;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    .label {
+        width: 33.33%;
+    }
+
+    footer {
+        font-size: 1rem;
+    }
+}
